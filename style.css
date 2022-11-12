@@ -1,0 +1,58 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Oswald:wght@200&display=swap');
+*{
+  box-sizing: border-box;
+}
+html, body {
+  font-family: 'Oswald', sans-serif;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  overflow:hidden;
+  min-height:100vh;
+  margin:0;
+  
+}
+.container{
+  display:flex;
+  width: 90vw;
+}
+.panel{
+  background-size: cover;
+  background-position: center;
+  background-repeat:norepeat;
+  height:80vh;
+  border-radius:40px;
+  color:white;
+  flex:0.5;
+  font-size:20px;
+  cursor: pointer;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.5s ease-in;
+  }
+.panel h1{
+  position: absolute;
+  bottom:20px;
+  left: 20px;
+  opacity: 0;
+}
+.panel.active{
+  flex: 5;
+  
+  
+}
+.panel.active h1{
+ opacity:1  ;
+    transition: opacity 1s;
+}
+
+@media(max-width:480px){
+  .container{
+    width: 100vw;
+    
+  }
+  .panel:nth-of-type(4).panel:nth-of-type(4){
+    display:none;
+  }
+}
